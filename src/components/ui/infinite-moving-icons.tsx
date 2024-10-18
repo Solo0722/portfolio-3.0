@@ -1,6 +1,8 @@
+"use client";
+
 import { cn } from "../../lib/utils";
-import { Icon } from "@iconify/react";
 import React, { useEffect, useState } from "react";
+import { Icon } from "@iconify/react";
 
 export const InfiniteMovingIcons = ({
   items,
@@ -9,8 +11,8 @@ export const InfiniteMovingIcons = ({
   pauseOnHover = true,
   className,
 }: {
-    items: {
-    id:number
+  items: {
+    id: number;
     name: string;
     icon: string;
   }[];
@@ -86,10 +88,17 @@ export const InfiniteMovingIcons = ({
       >
         {items.map((item, idx) => (
           <li
-            className="w-[350px] max-w-full relative rounded-2xl flex-shrink-0  px-8 py-3"
-            key={item.id}
+            className=" max-w-full relative rounded-2xl flex-shrink-0 about-card px-8 py-6"
+            key={item.name}
           >
-            <Icon icon={item.icon}  width={60} height={60} />
+              <span className="flex flex-col justify-center items-center gap-1">
+                <span>
+                  <Icon icon={item.icon} />
+                </span>
+                <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
+                  {item.name}
+                </span>
+              </span>
           </li>
         ))}
       </ul>

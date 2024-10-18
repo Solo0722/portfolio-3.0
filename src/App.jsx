@@ -3,6 +3,7 @@ import About from './containers/About';
 import Navbar from "./components/Navbar";
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { AvatarShapes } from "./assets";
+import Experience from './containers/Experience';
 
 const FullPageScroll = () => {
     
@@ -12,6 +13,7 @@ const FullPageScroll = () => {
         <Navbar />
         <Landing />
         <About />
+        <Experience/>
         <img
           src={AvatarShapes}
           alt="mark"

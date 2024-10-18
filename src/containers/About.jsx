@@ -143,7 +143,7 @@ const About = () => {
           </div>
         </div>
         <div>
-          <InfiniteMovingIcons items={skillset}/>
+          <InfiniteMovingIcons items={skillset} speed="slow" direction="left"/>
         </div>
       </section>
     </Parallax>

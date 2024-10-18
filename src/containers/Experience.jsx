@@ -1,47 +1,44 @@
+import { Parallax } from "react-scroll-parallax";
 
 
 const Experience = () => {
   return (
-    // <section className="px-8 md:px-24 lg:px-36 my-20" id="work">
-    //   <p className="head-text">My Work Experience</p>
-    //   <div className="work-content">
-    //     <div className="">
-    //       {experiences.map((item, index) => (
-    //         <div
-    //           key={index}
-    //           // onClick={() => setAnimationName(item.animation.toLowerCase())}
-    //           // onPointerOver={() => setAnimationName(item.animation.toLowerCase())}
-    //           // onPointerOut={() => setAnimationName("idle")}
-    //           className="work-content_container group"
-    //         >
-    //           <div className="flex flex-col h-full justify-start items-center py-2">
-    //             <div className="work-content_logo">
-    //               <img className="w-full h-full" src={item.icon} alt="" />
-    //             </div>
+    <Parallax speed={15}>
+      <section className="px-8 md:px-24 lg:px-36 my-20" id="work">
+        <p className="head-text">My Work Experience</p>
+        <div className="work-content">
+          <div className="">
+            {experiences.map((item, index) => (
+              <div
+                key={index}
+                // onClick={() => setAnimationName(item.animation.toLowerCase())}
+                // onPointerOver={() => setAnimationName(item.animation.toLowerCase())}
+                // onPointerOut={() => setAnimationName("idle")}
+                className="work-content_container group"
+              >
+                <div className="flex flex-col h-full justify-start items-center py-2">
+                  <div className="work-content_logo">
+                    <img className="w-full h-full" src={item.icon} alt="" />
+                  </div>
 
-    //             <div className="work-content_bar" />
-    //           </div>
+                  <div className="work-content_bar" />
+                </div>
 
-    //           <div className="sm:p-5 px-2.5 py-5">
-    //             <p className="font-bold text-white-800">{item.title}</p>
-    //             <p className="text-sm mb-5">
-    //               {item.pos} -- <span>{item.duration}</span>
-    //             </p>
-    //             <p className="group-hover:text-white transition-all ease-in-out duration-500">
-    //               {item.workDone.join(`\n`)}
-    //             </p>
-    //           </div>
-    //         </div>
-    //       ))}
-    //     </div>
-    //   </div>
-    // </section>
-    <section className="background">
-      <div className="content-wrapper">
-        <p className="content-title">Full Page Parallax Effect</p>
-        <p className="content-subtitle">Scroll down and up to see the effect!</p>
-      </div>
-    </section>
+                <div className="sm:p-5 px-2.5 py-5">
+                  <p className="font-bold text-white-800">{item.title}</p>
+                  <p className="text-sm mb-5">
+                    {item.pos} -- <span>{item.duration}</span>
+                  </p>
+                  <p className="group-hover:text-white transition-all ease-in-out duration-500">
+                    {item.workDone.join(`\n`)}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </Parallax>
   );
 }
 
