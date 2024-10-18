@@ -5,7 +5,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import { AvatarShapes } from "./assets";
 import Experience from './containers/Experience';
 
-const FullPageScroll = () => {
+const App = () => {
     
   return (
     <ParallaxProvider>
@@ -24,4 +24,4 @@ const FullPageScroll = () => {
   );
 };
 
-export default FullPageScroll;
+export default App;

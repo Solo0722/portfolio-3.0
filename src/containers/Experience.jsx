@@ -3,7 +3,7 @@ import { Parallax } from "react-scroll-parallax";
 
 const Experience = () => {
   return (
-    <Parallax speed={15}>
+    <Parallax speed={40}>
       <section className="px-8 md:px-24 lg:px-36 my-20" id="work">
         <p className="head-text">My Work Experience</p>
         <div className="work-content">
