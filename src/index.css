@@ -74,7 +74,7 @@
   }
 
   .work-canvas {
-    @apply col-span-1 rounded-lg bg-black-200 border border-black-300;
+    @apply col-span-1 rounded-lg bg-accent border border-accent-foreground;
   }
 
   .work-content {
@@ -82,21 +82,25 @@
   }
 
   .work-content_container {
-    @apply grid grid-cols-[auto_1fr] items-start gap-5  transition-all ease-in-out duration-500 cursor-pointer hover:bg-black-300 rounded-lg sm:px-5 px-2.5;
+    @apply grid grid-cols-[auto_1fr] items-start gap-5  transition-all ease-in-out duration-500 cursor-pointer hover:bg-zinc-700 rounded-lg sm:px-5 px-2.5;
   }
 
   .work-content_logo {
-    @apply rounded-3xl w-16 h-16 p-2 bg-black-600;
+    @apply rounded-lg w-16 h-16 p-2;
   }
 
   .work-content_bar {
-    @apply flex-1 w-0.5 mt-4 h-full bg-black-300 group-hover:bg-black-500 group-last:hidden;
+    @apply flex-1 w-0.5 mt-4 h-full bg-zinc-800 group-hover:bg-black-500 group-last:hidden;
   }
 
   .head-text {
     @apply sm:text-4xl text-3xl font-semibold;
   }
 }
+
+.work-content_logo {
+    background-color:rgba( 0, 0, 0, 0.25 );
+  }
 
 
 * {
@@ -127,13 +131,49 @@ p {
 
 .about-card {
  background: rgba( 0, 0, 0, 0.25 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+/* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
 backdrop-filter: blur( 6.5px );
 -webkit-backdrop-filter: blur( 6.5px );
 border-radius: 10px;
 /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 }
 
+.contact-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+  }
+
+  .contact-content {
+    /* width: 70%; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+    .input-field,
+  .message-field {
+    color: var(--foreground);
+    border: none;
+    outline:none;
+    /* border-radius: 4px; */
+    padding: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+    /* border: 1px solid rgba(255, 255, 255, 0.18); */
+  }
+
+  .message-field {
+    height: 160px;
+    align-items: flex-start;
+  }
 
 
 /* scroll bar  */

@@ -29,7 +29,7 @@ const Projects = () => {
   const currentProject = myProjects[selectedProjectIndex];
 
   return (
-    <section className="px-8 md:px-24 lg:px-36 my-20">
+    <section className="px-8 md:px-24 lg:px-36 my-20" id="projects">
       <h1 className="heading">
         Some of my selected
         <span className="text-primary"> projects</span>

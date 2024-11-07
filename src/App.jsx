@@ -4,6 +4,10 @@ import Navbar from "./components/Navbar";
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { AvatarShapes } from "./assets";
 import Experience from './containers/Experience';
+import Contact from './containers/Contact';
+import Projects from './containers/Projects';
+import Footer from './components/Footer';
+import Testimonials from './containers/Testimonials';
 
 const App = () => {
     
@@ -13,7 +17,11 @@ const App = () => {
         <Navbar />
         <Landing />
         <About />
-        <Experience/>
+        <Experience />
+        {/* <Projects /> */}
+        <Testimonials/>
+        <Contact />
+        <Footer/>
         <img
           src={AvatarShapes}
           alt="mark"

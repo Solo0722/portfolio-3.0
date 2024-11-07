@@ -25,17 +25,18 @@ const About = () => {
           <div className="about-card col-span-1 xl:row-span-3">
             <div className="grid-container">
               <img
-                src="assets/grid1.png"
+                src="assets/my-image.jpg"
                 alt="grid-1"
-                className="w-full sm:h-[276px] h-fit object-contain"
+                className="w-full sm:h-[276px] h-fit object-cover rounded-lg"
               />
 
               <div>
-                <p className="grid-headtext">Hi, I’m Adrian Hajdin</p>
+                <p className="grid-headtext">Hi, I’m Solomon Owusu-Ansah</p>
                 <p className="grid-subtext">
-                  With 12 years of experience, I have honed my skills in both
-                  frontend and backend dev, creating dynamic and responsive
-                  websites.
+                  I&apos;m a full-stack developer and data scientist with 4+
+                  years of experience building user-focused web and mobile
+                  applications. Skilled in both front-end and back-end, I thrive
+                  in collaborative, fast-paced environments.
                 </p>
               </div>
             </div>
@@ -52,8 +53,12 @@ const About = () => {
               <div>
                 <p className="grid-headtext">Tech Stack</p>
                 <p className="grid-subtext">
-                  I specialize in a variety of languages, frameworks, and tools
-                  that allow me to build robust and scalable applications
+                  I utilize several tools and technologies in my work that
+                  enhance my productivity and streamline my processes. I often
+                  rely on a variety of programming languages to build efficient
+                  and scalable applications. My workflow is supported by
+                  frameworks that help me develop applications faster and more
+                  effectively.
                 </p>
               </div>
             </div>
@@ -87,8 +92,8 @@ const About = () => {
                   I’m very flexible with time zone communications & locations
                 </p>
                 <p className="grid-subtext">
-                  I&apos;m based in Rjieka, Croatia and open to remote work
-                  worldwide.
+                  I&apos;m based in Kumasi, Ghana and open to remote and onsite
+                  work worldwide.
                 </p>
                 <Button
                   name="Contact Me"
@@ -110,10 +115,16 @@ const About = () => {
               <div>
                 <p className="grid-headtext">My Passion for Coding</p>
                 <p className="grid-subtext">
-                  I love solving problems and building things through code.
-                  Programming isn&apos;t just my profession—it&apos;s my
-                  passion. I enjoy exploring new technologies, and enhancing my
-                  skills.
+                  Coding has been a defining passion throughout my academic and
+                  professional journey. I discovered early on that programming
+                  is more than just writing code—it’s a tool for creating
+                  solutions and bringing ideas to life. My journey began with a
+                  deep interest in technology, which led me to pursue a degree
+                  in Computer Engineering, where I excelled and maintained a
+                  position on the Provost’s Academic Excellence List each year.
+                  As I continue to develop my skills, my passion for coding
+                  remains as strong as ever, motivating me to push boundaries
+                  and learn something new every day
                 </p>
               </div>
             </div>
@@ -135,7 +146,7 @@ const About = () => {
                     alt="copy"
                   />
                   <p className="lg:text-2xl md:text-x">
-                    oasolomon77@gmail.com
+                    owusuansahsolomon39@gmail.com
                   </p>
                 </div>
               </div>
@@ -143,7 +154,7 @@ const About = () => {
           </div>
         </div>
         <div>
-          <InfiniteMovingIcons items={skillset} speed="slow" direction="left"/>
+          <InfiniteMovingIcons items={skillset} speed="slow" direction="left" />
         </div>
       </section>
     </Parallax>

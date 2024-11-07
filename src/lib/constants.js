@@ -30,15 +30,15 @@ export const SOCIAL_MEDIA_LINKS = [
   {
     name: "Twitter",
     icon: "simple-icons:twitter",
-    link: "https://github.com/solo0722",
+    link: "https://x.com/DevEx_Alchemy",
   },
 ];
 
 export const navItems = [
   { name: "Home", link: "#home" },
   { name: "About", link: "#about" },
+  { name: "Experience", link: "#experience" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
 
