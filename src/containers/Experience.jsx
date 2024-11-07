@@ -1,22 +1,17 @@
-import { Briefcase, CalendarDays, GraduationCap, LocateIcon,MapPin } from "lucide-react";
-import { Parallax } from "react-scroll-parallax";
+import { Briefcase, CalendarDays, GraduationCap, MapPin } from "lucide-react";
+import TitleBar from "../components/TitleBar";
+
 
 
 const Experience = () => {
   return (
     // <Parallax speed={40}>
-    <section className="px-8 md:px-24 lg:px-36 py-20" id="experience">
-      <p className="head-text">My Work Experience</p>
+    <section className="px-8 md:px-24 lg:px-36 py-12" id="experience">
+      <TitleBar title1="My" title2={"Experiences"} />
       <div className="work-content">
         <div className="">
           {experiences.map((item, index) => (
-            <div
-              key={index}
-              // onClick={() => setAnimationName(item.animation.toLowerCase())}
-              // onPointerOver={() => setAnimationName(item.animation.toLowerCase())}
-              // onPointerOut={() => setAnimationName("idle")}
-              className="work-content_container group"
-            >
+            <div key={index} className="work-content_container group">
               <div className="flex flex-col h-full justify-start items-center py-2">
                 <div className="work-content_logo flex items-center justify-center">
                   {item.type === "work" ? (
@@ -60,7 +55,8 @@ const Experience = () => {
   );
 }
 
-export const experiences = [
+
+const experiences = [
   {
     organisation: "SpringKnight Limited",
     duration: "Sep. 2024 - Present",
@@ -126,6 +122,5 @@ export const experiences = [
     content: <></>,
   },
 ];
-
 
 export default Experience

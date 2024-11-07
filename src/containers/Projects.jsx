@@ -1,115 +1,103 @@
-// import gsap from "gsap";
-// import { useGSAP } from "@gsap/react";
-import {  useState } from "react";
-import { myProjects } from "../lib/constants";
+import { ExternalLink, Github } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../components/ui/carousel";
+import useEmblaCarousel from "embla-carousel-react";
+import { projects } from '../lib/constants';
+import TitleBar from "../components/TitleBar";
+import Autoplay from "embla-carousel-autoplay";
 
-const projectCount = myProjects.length;
+export default function Projects() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
-const Projects = () => {
-  const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
+ 
 
-  const handleNavigation = (direction) => {
-    setSelectedProjectIndex((prevIndex) => {
-      if (direction === "previous") {
-        return prevIndex === 0 ? projectCount - 1 : prevIndex - 1;
-      } else {
-        return prevIndex === projectCount - 1 ? 0 : prevIndex + 1;
-      }
-    });
+  const onSelect = () => {
+    if (!emblaApi) return;
   };
 
-  // useGSAP(() => {
-  //   gsap.fromTo(
-  //     `.animatedText`,
-  //     { opacity: 0 },
-  //     { opacity: 1, duration: 1, stagger: 0.2, ease: "power2.inOut" }
-  //   );
-  // }, [selectedProjectIndex]);
-
-  const currentProject = myProjects[selectedProjectIndex];
-
   return (
-    <section className="px-8 md:px-24 lg:px-36 my-20" id="projects">
-      <h1 className="heading">
-        Some of my selected
-        <span className="text-primary"> projects</span>
-      </h1>
-
-      <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
-        <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
-          <div className="absolute top-0 right-0">
-            <img
-              src={currentProject.spotlight}
-              alt="spotlight"
-              className="w-full h-96 object-cover rounded-xl"
-            />
-          </div>
-
-          <div
-            className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg"
-            style={currentProject.logoStyle}
-          >
-            <img
-              className="w-10 h-10 shadow-sm"
-              src={currentProject.logo}
-              alt="logo"
-            />
-          </div>
-
-          <div className="flex flex-col gap-5 text-white-600 my-5">
-            <p className="text-white text-2xl font-semibold animatedText">
-              {currentProject.title}
-            </p>
-
-            <p className="animatedText">{currentProject.desc}</p>
-            <p className="animatedText">{currentProject.subdesc}</p>
-          </div>
-
-          <div className="flex items-center justify-between flex-wrap gap-5">
-            <div className="flex items-center gap-3">
-              {currentProject.tags.map((tag, index) => (
-                <div key={index} className="tech-logo">
-                  <img src={tag.path} alt={tag.name} />
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <TitleBar title1={"My"} title2={"Projects"} />
+      <div className="relative">
+        <Carousel
+          ref={emblaRef}
+          onSelect={onSelect}
+          className="w-full"
+          plugins={[
+            Autoplay({
+              delay: 10000,
+            }),
+          ]}
+        >
+          <CarouselContent>
+            {projects.map((project, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <div className="relative group overflow-hidden rounded-lg shadow-lg aspect-w-16 aspect-h-9 my-1">
+                  <img
+                    src={project.image_url}
+                    alt={project.name}
+                    className="h-80 transition-transform duration-300 group-hover:scale-110 object-fill"
+                    style={{
+                      mixBlendMode:"color-burn"
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
+                      <h3 className="text-xl font-semibold mb-2">
+                        {project.name}
+                      </h3>
+                      <p className="text-sm mb-4 line-clamp-3">
+                        {project.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.tools.map((tag, tagIndex) => (
+                          <span
+                            key={tagIndex}
+                            className="px-2 py-1 bg-white/20 text-white text-xs rounded-full"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="flex justify-between items-center">
+                        {project.url && (
+                          <a
+                            href={project.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-white hover:text-blue-300 flex items-center transition-colors duration-200"
+                          >
+                            <ExternalLink size={18} className="mr-1" />
+                            Live Demo
+                          </a>
+                        )}
+                        {project.github_repo && (
+                          <a
+                            href={project.github_repo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-white hover:text-blue-300 flex items-center transition-colors duration-200"
+                          >
+                            <Github size={18} className="mr-1" />
+                            Source Code
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              ))}
-            </div>
-
-            <a
-              className="flex items-center gap-2 cursor-pointer text-white-600"
-              href={currentProject.href}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <p>Check Live Site</p>
-              <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
-            </a>
-          </div>
-
-          <div className="flex justify-between items-center mt-7">
-            <button
-              className="arrow-btn"
-              onClick={() => handleNavigation("previous")}
-            >
-              <img src="/assets/left-arrow.png" alt="left arrow" />
-            </button>
-
-            <button
-              className="arrow-btn"
-              onClick={() => handleNavigation("next")}
-            >
-              <img
-                src="/assets/right-arrow.png"
-                alt="right arrow"
-                className="w-4 h-4"
-              />
-            </button>
-          </div>
-        </div>
-
-        <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full"></div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+        </Carousel>
       </div>
-    </section>
+    </div>
   );
-};
-
-export default Projects;
+}

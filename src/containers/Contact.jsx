@@ -61,9 +61,9 @@ const Contact = () => {
   
 
   return (
-    <section id="contact" className="px-8 md:px-24 lg:px-36 py-20 w-full">
-      <TitleBar title="Let's get in touch" />
-      <div className="flex flex-row w-full mt-10">
+    <section id="contact" className="px-8 md:px-24 lg:px-36 py-12 w-full">
+      <TitleBar title1="Let's get" title2={"in touch"} />
+      <div className="flex flex-row w-full">
         <div className="w-[70%] flex pr-20">
           <Form {...form}>
             <form
@@ -120,7 +120,7 @@ const Contact = () => {
                   </FormItem>
                 )}
               />
-              <Button type="submit">{ loading ? "Loading..." : "Submit" }</Button>
+              <Button type="submit">{loading ? "Loading..." : "Submit"}</Button>
             </form>
           </Form>
         </div>

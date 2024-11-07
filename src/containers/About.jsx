@@ -20,7 +20,7 @@ const About = () => {
 
   return (
     <Parallax speed={0}>
-      <section className="px-8 md:px-24 lg:px-36" id="about">
+      <section className="px-8 md:px-24 lg:px-36 pb-12" id="about">
         <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
           <div className="about-card col-span-1 xl:row-span-3">
             <div className="grid-container">
@@ -78,11 +78,11 @@ const About = () => {
                   bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
                   labelsData={[
                     {
-                      lat: 40,
-                      lng: -100,
-                      text: "Rjieka, Croatia",
-                      color: "white",
-                      size: 15,
+                      lat: 6.665375939298735,
+                      lng:  -1.604744744154722,
+                      text: "Kumasi, Ghana",
+                      color: "green",
+                      size: 30,
                     },
                   ]}
                 />
