@@ -34,20 +34,20 @@ const Landing = () => {
       id="home"
       className="flex flex-rol w-full h-screen items-center relative"
     >
-      <div className="w-full h-full px-8 md:px-24 lg:px-36 -pt-20 flex flex-col justify-center items-center md:items-start">
+      <div className="w-full h-full px-8 md:px-24 lg:px-36 -mt-20 flex flex-col justify-center items-center md:items-start">
         <div className="tracking-wide font-bold pb-4">
-          <h1 className="animation-text text-[40px] md:text-6xl lg:text-7xl font-extrabold">
+          <h1 className="animation-text text-5xl md:text-6xl lg:text-7xl font-extrabold text-center md:text-left lg:text-left">
             Building{" "}
             <FlipWords
               words={["innovative", "creative", "beautiful", "real-world"]}
               className="headertext-clip animation-text"
             />
           </h1>
-          <h1 className="animation-text text-[40px] md:text-6xl lg:text-7xl font-extrabold">
+          <h1 className="animation-text text-5xl md:text-6xl lg:text-7xl font-extrabold text-center md:text-left lg:text-left">
             solutions with technology.
           </h1>
         </div>
-        <div className="animation-text w-3/5 text-accent-foreground text-sm leading-loose">
+        <div className="animation-text w-full md:w-3/5 text-center md:text-left lg:text-left text-accent-foreground text-sm leading-loose">
           Hello there, I am <strong>Solomon</strong>, a software developer and
           data scientist from Ghana. Experienced in collaborating effectively
           with cross-functional teams to deliver high-quality solutions that
@@ -72,7 +72,7 @@ const Landing = () => {
           ))}
         </div>
       </div>
-      <div className="absolute top-[20%] right-[5%] -z-10 opacity-100">
+      <div className="absolute top-[20%] right-[5%] -z-10 opacity-100 hidden md:flex">
         <Lottie
           loop
           autoPlay

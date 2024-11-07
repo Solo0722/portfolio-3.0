@@ -9,7 +9,8 @@
     --primary: #00aeff;
     --primary-foreground: #d5d9eb;
     --accent: #19152a;
-    --accent-foreground: #d5d9eb50;
+    --accent-foreground: #d5d9eb90;
+    --accent-foreground2: #d5d9eb50;
     --radius: 0.5rem;
     --parallax-offset: 30vh;
     --content-offset: 40vh;
@@ -57,11 +58,11 @@
   }
 
   .grid-headtext {
-    @apply text-xl font-semibold mb-2 text-white ;
+    @apply text-xl font-semibold mb-2 text-foreground ;
   }
 
   .grid-subtext {
-    @apply text-[#afb0b6] text-base ;
+    @apply text-accent-foreground text-base ;
   }
 
   .copy-container {
@@ -82,7 +83,7 @@
   }
 
   .work-content_container {
-    @apply grid grid-cols-[auto_1fr] items-start gap-5  transition-all ease-in-out duration-500 cursor-pointer hover:bg-zinc-700 rounded-lg sm:px-5 px-2.5;
+    @apply grid grid-cols-[auto_1fr] items-start gap-5  transition-all ease-in-out duration-500 cursor-pointer hover:bg-zinc-700 rounded-lg;
   }
 
   .work-content_logo {

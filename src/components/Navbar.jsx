@@ -47,7 +47,7 @@ const Navbar = () => {
       </ul>
       <a
         href="https://ik.imagekit.io/5kwcgtj3iv/images/Solomon_Owusu_Ansah_CV.pdf?updatedAt=1720100955055"
-        download="https://ik.imagekit.io/5kwcgtj3iv/images/Solomon_Owusu_Ansah_CV.pdf?updatedAt=1720100955055"
+        download={true}
         target="_blank"
         rel="noopener noreferrer"
       >

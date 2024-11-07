@@ -21,7 +21,7 @@ export default function Projects() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <section className="px-8 md:px-24 lg:px-36 pb-12" id="projects">
       <TitleBar title1={"My"} title2={"Projects"} />
       <div className="relative">
         <Carousel
@@ -31,6 +31,9 @@ export default function Projects() {
           plugins={[
             Autoplay({
               delay: 10000,
+              stopOnInteraction: true,
+              stopOnMouseEnter: true,
+              stopOnFocusIn:true
             }),
           ]}
         >
@@ -46,8 +49,8 @@ export default function Projects() {
                       mixBlendMode:"color-burn"
                     }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 flex flex-col justify-end p-6 text-foreground">
                       <h3 className="text-xl font-semibold mb-2">
                         {project.name}
                       </h3>
@@ -58,7 +61,7 @@ export default function Projects() {
                         {project.tools.map((tag, tagIndex) => (
                           <span
                             key={tagIndex}
-                            className="px-2 py-1 bg-white/20 text-white text-xs rounded-full"
+                            className="px-2 py-1 bg-white/20 text-foreground text-xs rounded-full"
                           >
                             {tag}
                           </span>
@@ -70,7 +73,7 @@ export default function Projects() {
                             href={project.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-white hover:text-blue-300 flex items-center transition-colors duration-200"
+                            className="text-foreground hover:text-blue-300 flex items-center transition-colors duration-200"
                           >
                             <ExternalLink size={18} className="mr-1" />
                             Live Demo
@@ -81,7 +84,7 @@ export default function Projects() {
                             href={project.github_repo}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-white hover:text-blue-300 flex items-center transition-colors duration-200"
+                            className="text-foreground hover:text-blue-300 flex items-center transition-colors duration-200"
                           >
                             <Github size={18} className="mr-1" />
                             Source Code
@@ -98,6 +101,6 @@ export default function Projects() {
         <CarouselNext />
         </Carousel>
       </div>
-    </div>
+    </section>
   );
 }

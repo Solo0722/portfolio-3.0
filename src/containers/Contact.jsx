@@ -63,8 +63,8 @@ const Contact = () => {
   return (
     <section id="contact" className="px-8 md:px-24 lg:px-36 py-12 w-full">
       <TitleBar title1="Let's get" title2={"in touch"} />
-      <div className="flex flex-row w-full">
-        <div className="w-[70%] flex pr-20">
+      <div className="flex flex-col md:flex-row w-full gap-10 md:gap-0">
+        <div className="w-full  md:w-[70%] flex pr-0 md:pr-20">
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(sendEmail)}
@@ -124,8 +124,8 @@ const Contact = () => {
             </form>
           </Form>
         </div>
-        <div className="w-[30%] flex flex-col">
-          <p style={{ lineHeight: "1.6rem" }}>
+        <div className="w-full md:w-[30%] flex flex-col text-sm">
+          <p className="text-sm">
             Let&apos;s make something new, different and more meaningful or make
             something more visual and conceptual. I am also available for a job.
           </p>
@@ -134,8 +134,8 @@ const Contact = () => {
               <Icon icon="solar:phone-calling-outline" />
             </div>
             <div className="contact-content">
-              <p>+233 (0) 599171142</p>
-              <p>+233 (0) 504339488</p>
+              <p className="text-sm">+233 (0) 599171142</p>
+              <p className="text-sm">+233 (0) 504339488</p>
             </div>
           </div>
           <div className="w-full h-[60px] my-2 rounded-md flex flex-row items-center justify-start">
@@ -143,7 +143,7 @@ const Contact = () => {
               <Icon icon="solar:letter-unread-outline" />
             </div>
             <div className="contact-content">
-              <p>
+              <p className="text-sm">
                 owusuansahsolomon39
                 <br />
                 @gmail.com
@@ -155,8 +155,8 @@ const Contact = () => {
               <Icon icon="solar:map-point-outline" />
             </div>
             <div className="contact-content">
-              <p>Kentinkrono</p>
-              <p>Kumasi - Ghana</p>
+              <p className="text-sm">Kentinkrono</p>
+              <p className="text-sm">Kumasi - Ghana</p>
             </div>
           </div>
         </div>

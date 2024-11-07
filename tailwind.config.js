@@ -32,6 +32,7 @@ export default {
         accent: {
           DEFAULT: "var(--accent)",
           foreground: "var(--accent-foreground)",
+          foreground2: "var(--accent-foreground2)",
         },
       },
       borderRadius: {

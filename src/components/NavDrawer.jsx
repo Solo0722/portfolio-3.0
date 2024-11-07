@@ -1,49 +1,57 @@
+import { useLayoutEffect } from "react";
 import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { Label } from "./ui/label";
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "./ui/sheet";
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from "./ui/sheet";
+import gsap from "gsap";
+import { Menu } from "lucide-react";
+import { navItems } from "../lib/constants";
 
 function NavDrawer() {
+  useLayoutEffect(() => {
+    const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+    // tl.fromTo(".animation-nav", { opacity: 0 }, { opacity: 1, duration: 1 });
+    tl.fromTo(
+      ".animation-navLink",
+      { x: "100%", opacity: 0 },
+      { x: "0%", opacity: 1, duration: 1, stagger: 0.25 },
+      "-=1"
+    );
+  });
+
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline">Open</Button>
+        <Button variant="ghost">
+          <Menu />
+        </Button>
       </SheetTrigger>
       <SheetContent>
-        <SheetHeader>
-          <SheetTitle>Edit profile</SheetTitle>
-          <SheetDescription>
-            Make changes to your profile here. Click save when you&apos;re done.
-          </SheetDescription>
-        </SheetHeader>
-        <div className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
-              Name
-            </Label>
-            <Input id="name" value="Pedro Duarte" className="col-span-3" />
-          </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
-              Username
-            </Label>
-            <Input id="username" value="@peduarte" className="col-span-3" />
-          </div>
-        </div>
-        <SheetFooter>
-          <SheetClose asChild>
-            <Button type="submit">Save changes</Button>
-          </SheetClose>
-        </SheetFooter>
+        <ul>
+          {navItems.map((navLink) => (
+            <SheetClose asChild key={navLink.name}>
+              <li className="animation-navLink">
+                <a href={navLink.link}>
+                  <p>{navLink.name}</p>
+                </a>
+              </li>
+            </SheetClose>
+          ))}
+          <li className="animation-navLink">
+            <a
+              href="https://ik.imagekit.io/5kwcgtj3iv/images/Solomon_Owusu_Ansah_CV.pdf?updatedAt=1720100955055"
+              download={true}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                type="primary"
+                style={{ fontSize: 12 }}
+                className="css-button-sliding-to-left--black"
+              >
+                Download CV
+              </Button>
+            </a>
+          </li>
+        </ul>
       </SheetContent>
     </Sheet>
   );

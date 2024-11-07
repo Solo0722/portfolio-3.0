@@ -145,7 +145,7 @@ const About = () => {
                     src={hasCopied ? "assets/tick.svg" : "assets/copy.svg"}
                     alt="copy"
                   />
-                  <p className="lg:text-2xl md:text-x">
+                  <p className="grid-subtext lg:text-2xl md:text-x">
                     owusuansahsolomon39@gmail.com
                   </p>
                 </div>

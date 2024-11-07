@@ -70,7 +70,6 @@ const experiences = [
       "Collaboration with Teams: Collaborated with cross-functional teams, including designers and other developers, to ensure a cohesive and integrated user experience across both platforms. Engaged in regular communication to address challenges, provide updates, and coordinate feature implementations and bug fixes.",
     ],
     type: "work",
-    content: <></>,
   },
   {
     organisation: "Asqii LLC.",
@@ -85,7 +84,6 @@ const experiences = [
       "Collaboration with Teams: Collaborated with cross-functional teams, including designers and other developers, to ensure a cohesive and integrated user experience across both platforms. Engaged in regular communication to address challenges, provide updates, and coordinate feature implementations and bug fixes.",
     ],
     type: "work",
-    content: <></>,
   },
   {
     organisation: "JLS Trading Co.",
@@ -98,7 +96,6 @@ const experiences = [
       "Communication and Collaboration: Engaged in regular communication with cross-functional teams, including developers, designers, and project managers, to ensure alignment on project goals.",
     ],
     type: "work",
-    content: <></>,
   },
   {
     organisation: "JLS Trading Co.",
@@ -110,16 +107,14 @@ const experiences = [
       "UI features implementation: Worked on implementing frontend features in the Feature Tracker applicaiton",
     ],
     type: "work",
-    content: <></>,
   },
   {
     organisation: "",
     duration: "Jan. 2021 - Sep. 2024",
     jobTitle: "Bachelor's Degree in Computer Engineering, KNUST",
     location: "KNUST - Kumasi Campus",
-    workDone: [""],
+    workDone: ["Pursued a degree in Computer Engineering, where I excelled and maintained a position on the Provost’s Academic Excellence List each year."],
     type: "school",
-    content: <></>,
   },
 ];
 

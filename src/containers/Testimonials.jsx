@@ -5,7 +5,7 @@ import { testimonials } from "../lib/constants";
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="px-8 md:px-24 lg:px-36 py-12 w-full">
+    <section id="testimonials" className="px-8 md:px-24 lg:px-36 py-12 w-full overflow-x-hidden">
       <TitleBar title1={"Kind words from"} title2="satisfied clients" />
       <div className="flex flex-col items-center">
         <div
