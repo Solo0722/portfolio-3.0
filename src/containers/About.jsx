@@ -5,6 +5,7 @@ import Button from "../components/Button";
 import { Parallax } from "react-scroll-parallax";
 import { InfiniteMovingIcons } from "../components/ui/infinite-moving-icons";
 import { skillset } from "../lib/constants";
+import { Copy, Check } from "lucide-react";
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
@@ -28,6 +29,7 @@ const About = () => {
                 src="assets/my-image.jpg"
                 alt="grid-1"
                 className="w-full sm:h-[276px] h-fit object-cover rounded-lg"
+                loading="lazy"
               />
 
               <div>
@@ -79,7 +81,7 @@ const About = () => {
                   labelsData={[
                     {
                       lat: 6.665375939298735,
-                      lng:  -1.604744744154722,
+                      lng: -1.604744744154722,
                       text: "Kumasi, Ghana",
                       color: "green",
                       size: 30,
@@ -141,10 +143,7 @@ const About = () => {
               <div className="space-y-2">
                 <p className="grid-subtext text-center">Contact me</p>
                 <div className="copy-container" onClick={handleCopy}>
-                  <img
-                    src={hasCopied ? "assets/tick.svg" : "assets/copy.svg"}
-                    alt="copy"
-                  />
+                  {hasCopied ? <Check /> : <Copy />}
                   <p className="grid-subtext lg:text-2xl md:text-x">
                     owusuansahsolomon39@gmail.com
                   </p>

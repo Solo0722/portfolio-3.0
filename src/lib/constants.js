@@ -1,11 +1,3 @@
-export const MEDIA_QUERIES = {
-  MOBILE: "@media only screen and (max-width: 486px)",
-  TABLET: "@media only screen and (min-width: 486px) and (max-width: 1000px)",
-  LAPTOP: "@media only screen and (min-width: 1000px) and (max-width: 1024px)",
-  DESKTOP: "@media only screen and (min-width: 1025px) and (max-width: 1200px)",
-  TV: "@media only screen and (min-width: 1201px)",
-};
-
 export const COLORS = {
   PRIMARY_COLOR: "#00aeff",
   PRIMARY_COLOR_2: "#006bcb",
@@ -68,31 +60,31 @@ export const skillset = [
 export const testimonials = [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "Collaborating with Solomon was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Solomon's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Solomon is the ideal partner.",
     name: "Michael Johnson",
     title: "Director of AlphaStream Technologies",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "Collaborating with Solomon was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Solomon's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Solomon is the ideal partner.",
     name: "Michael Johnson",
     title: "Director of AlphaStream Technologies",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "Collaborating with Solomon was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Solomon's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Solomon is the ideal partner.",
     name: "Michael Johnson",
     title: "Director of AlphaStream Technologies",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "Collaborating with Solomon was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Solomon's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Solomon is the ideal partner.",
     name: "Michael Johnson",
     title: "Director of AlphaStream Technologies",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "Collaborating with Solomon was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Solomon's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Solomon is the ideal partner.",
     name: "Michael Johnson",
     title: "Director of AlphaStream Technologies",
   },
