@@ -29,17 +29,17 @@ const Experience = () => {
                   {item.workDone.map((bullet, i) => (
                     <li
                       key={i}
-                      className="text-sm leading-snug tracking-wide text-gray-600 dark:text-gray-300 text-opacity-100 mb-1"
+                      className="text-sm leading-snug tracking-wide  text-gray-300 text-opacity-100 mb-1"
                     >
                       {bullet}
                     </li>
                   ))}
                 </ul>
                 <div className="mt-5 flex flex-row gap-3">
-                  <p className=" text-xs text-gray-500 dark:text-gray-400 flex items-center">
+                  <p className=" text-xs text-gray-400 flex items-center">
                     <CalendarDays size={14} className="mr-1" /> {item.duration}
                   </p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 flex items-center">
+                  <p className="text-xs text-gray-400 flex items-center">
                     <MapPin size={14} className="mr-1" /> {item.location}
                   </p>
                 </div>

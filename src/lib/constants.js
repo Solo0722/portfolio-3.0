@@ -124,6 +124,17 @@ export const projects = [
     projectType: "web",
   },
   {
+    name: "Class Assistant",
+    description:
+      "Class Assistant is a web-based platform designed to enhance the KNUST virtual classroom experience by improving communication between students and lecturers. It serves as a bridge to facilitate more effective interactions, ensuring seamless support for both students and faculty.",
+    tools: ["React", "Nodejs", "Postgresql"],
+    url: "https://class-assistant.vercel.app",
+    github_repo: "https://github.com/solo0722",
+    image_url:
+      "https://ik.imagekit.io/5kwcgtj3iv/Screenshot%202024-11-12%20143103.png?updatedAt=1731432558974",
+    projectType: "web",
+  },
+  {
     name: "Contaxts",
     description: "Contacts listing mobile app made with expo",
     tools: ["React Native", "Sanity", "Expo", "NativeBase"],

@@ -41,21 +41,15 @@ export default function Projects() {
             {projects.map((project, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <div
-                  className={`relative group overflow-hidden rounded-lg shadow-lg  ${
-                    project.projectType === "mobile"
-                      ? "aspect-[9/16] max-w-[300px] mx-auto"
-                      : "aspect-video"
-                  }  my-1`}
+                  className={`relative group overflow-hidden rounded-lg shadow-lg aspect-w-16 aspect-h-9`}
                 >
-                  <img
-                    src={project.image_url}
-                    alt={project.name}
-                    className="transition-transform duration-300 group-hover:scale-110 object-cover"
-                    style={{
-                      mixBlendMode: "color-burn",
-                    }}
-                    loading="lazy"
-                  />
+                
+                    <img
+                      src={project.image_url}
+                      alt={project.name}
+                      className={`h-80 transition-transform duration-300 group-hover:scale-110 object-center object-fill mix-blend-color-burn`}
+                      loading="lazy"
+                    />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute inset-0 flex flex-col justify-end p-6 text-foreground">
                       <h3 className="text-xl font-semibold mb-2 flex items-center">
