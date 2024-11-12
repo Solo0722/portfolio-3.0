@@ -40,7 +40,7 @@ const Navbar = () => {
       </div>
       <ul className="list-none hidden md:flex flex-row items-center justify-between">
         {navItems.map((item) => (
-          <li key={item.name} className="list-none px-4">
+          <li key={item.name} className="list-none px-4 hover:text-white">
             <a href={item.link}>{item.name}</a>
           </li>
         ))}
@@ -53,7 +53,7 @@ const Navbar = () => {
       >
         <button
           type="button"
-          className="px-4 py-2 rounded-md border border-accent-foreground hidden md:flex"
+          className="px-4 py-2 rounded-md border border-accent-foreground hidden md:flex hover:text-white hover:border-white"
         >
           Download CV
         </button>

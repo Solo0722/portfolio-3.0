@@ -33,7 +33,10 @@ const About = () => {
               />
 
               <div>
-                <p className="grid-headtext">Hi, I’m Solomon Owusu-Ansah</p>
+                <p className="grid-headtext">
+                  Hi, I’m{" "}
+                  <span className="headertext-clip">Solomon Owusu-Ansah</span>
+                </p>
                 <p className="grid-subtext">
                   I&apos;m a full-stack developer and data scientist with 4+
                   years of experience building user-focused web and mobile
@@ -126,7 +129,7 @@ const About = () => {
                   position on the Provost’s Academic Excellence List each year.
                   As I continue to develop my skills, my passion for coding
                   remains as strong as ever, motivating me to push boundaries
-                  and learn something new every day
+                  and learn something new every day.
                 </p>
               </div>
             </div>

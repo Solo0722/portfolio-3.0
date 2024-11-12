@@ -53,7 +53,7 @@ const Landing = () => {
           with cross-functional teams to deliver high-quality solutions that
           meet user needs and enhance overall user experience. Possesses a
           strong understanding of both front-end and back-end development, along
-          with expertise in data analysis techniques
+          with expertise in data analysis techniques.
         </div>
         <div className="mt-5 flex flex-row gap-2">
           {SOCIAL_MEDIA_LINKS.map((item) => (
@@ -63,9 +63,7 @@ const Landing = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button
-                className={`animation-text p-4 rounded-md border border-accent-foreground`}
-              >
+              <button className="button animation-text p-4 rounded-md border border-accent-foreground hover:text-white hover:border-white">
                 <Icon icon={item.icon} color={COLORS.TEXT_COLOR} />
               </button>
             </a>
