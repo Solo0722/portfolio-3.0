@@ -1,57 +1,120 @@
+"use client";
+
+import { useRef } from "react";
 import { Briefcase, CalendarDays, GraduationCap, MapPin } from "lucide-react";
+import { motion, useInView } from "framer-motion";
 import TitleBar from "../components/TitleBar";
 
 
-
 const Experience = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 12,
+      },
+    },
+  };
+
   return (
-    <section className="px-8 md:px-24 lg:px-36 py-12" id="experience">
-      <TitleBar title1="My" title2={"Experiences"} />
-      <div className="work-content">
+    <section className="px-8 md:px-24 lg:px-36 py-12" id="experience" ref={ref}>
+      <TitleBar title1="My" title2="Experiences" />
+      <motion.div
+        className="work-content"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+      >
         <div>
           {experiences.map((item, index) => (
-            <div key={index} className="work-content_container group">
+            <motion.div
+              key={index}
+              className="work-content_container group"
+              variants={itemVariants}
+            >
               <div className="flex flex-col h-full justify-start items-center py-2">
-                <div className="work-content_logo flex items-center justify-center">
+                <motion.div
+                  className="work-content_logo flex items-center justify-center"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
                   {item.type === "work" ? (
                     <Briefcase size={24} />
                   ) : (
                     <GraduationCap size={24} />
                   )}
-                </div>
+                </motion.div>
                 <div className="work-content_bar" />
               </div>
 
               <div className="sm:p-5 px-2.5 py-5">
-                <p className="font-bold text-lg">{item.jobTitle}</p>
-                <p className="text-sm mb-5">{item.location}</p>
-                <ul className="list-disc pl-5 group-hover:text-white transition-all ease-in-out duration-500">
+                <motion.p
+                  className="font-bold text-lg"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                >
+                  {item.jobTitle}
+                </motion.p>
+                <motion.p
+                  className="text-sm mb-5"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  {item.organisation}
+                </motion.p>
+                <motion.ul className="list-disc pl-5 group-hover:text-white transition-all ease-in-out duration-500">
                   {item.workDone.map((bullet, i) => (
-                    <li
+                    <motion.li
                       key={i}
-                      className="text-sm leading-snug tracking-wide  text-gray-300 text-opacity-100 mb-1"
+                      className="text-sm leading-snug tracking-wide text-gray-300 text-opacity-100 mb-1"
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.4 + i * 0.1 }}
                     >
                       {bullet}
-                    </li>
+                    </motion.li>
                   ))}
-                </ul>
-                <div className="mt-5 flex flex-row gap-3">
-                  <p className=" text-xs text-gray-400 flex items-center">
+                </motion.ul>
+                <motion.div
+                  className="mt-5 flex flex-row gap-3"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.5 }}
+                >
+                  <p className="text-xs text-gray-400 flex items-center">
                     <CalendarDays size={14} className="mr-1" /> {item.duration}
                   </p>
                   <p className="text-xs text-gray-400 flex items-center">
                     <MapPin size={14} className="mr-1" /> {item.location}
                   </p>
-                </div>
+                </motion.div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
-}
-
+};
 
 const experiences = [
   {
@@ -106,12 +169,12 @@ const experiences = [
     type: "work",
   },
   {
-    organisation: "",
+    organisation: "KNUST",
     duration: "Jan. 2021 - Sep. 2024",
-    jobTitle: "Bachelor's Degree in Computer Engineering, KNUST",
+    jobTitle: "Bachelor's Degree in Computer Engineering",
     location: "KNUST - Kumasi Campus",
     workDone: [
-      "Pursued a degree in Computer Engineering, where I excelled and maintained a position on the Provost’s Academic Excellence List each year.",
+      "Pursued a degree in Computer Engineering, where I excelled and maintained a position on the Provost's Academic Excellence List each year.",
     ],
     type: "school",
   },

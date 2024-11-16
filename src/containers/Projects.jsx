@@ -47,7 +47,7 @@ export default function Projects() {
                     <img
                       src={project.image_url}
                       alt={project.name}
-                      className={`h-80 transition-transform duration-300 group-hover:scale-110 object-center object-fill mix-blend-color-burn`}
+                      className={`h-80 transition-transform duration-300 group-hover:scale-110 object-center object-cover w-full mix-blend-color-burn`}
                       loading="lazy"
                     />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
