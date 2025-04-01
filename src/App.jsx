@@ -17,7 +17,7 @@ const App = () => {
   return (
     <Suspense fallback={<LoaderSpinner />}>
       <ParallaxProvider>
-        <main className="relative">
+        <main className="relative container mx-auto">
           <Navbar />
           <Landing />
           <About />
