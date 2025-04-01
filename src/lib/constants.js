@@ -92,6 +92,17 @@ export const testimonials = [
 
 export const projects = [
   {
+    name: "ApplyPlus",
+    description: 
+      "ApplyPlus is a job application automation platform that helps users streamline the job search process by automatically tailoring resumes, generating cover letters, and filling application forms based on user profiles.",
+    tools: ["Next.js", "React", "TypeScript", "Firebase", "Vercel"],
+    url: "https://applyplus.vercel.app",
+    github_repo: "https://github.com/solo0722",
+    image_url:
+      "https://ik.imagekit.io/5kwcgtj3iv/Screenshot%202025-03-20%20092831.png?updatedAt=1743466964954",
+    projectType: "web",
+},
+  {
     name: "CampusEase",
     description:
       "CampusEase is a service-based mobile platform that connect students on KNUST campus to service providers",
